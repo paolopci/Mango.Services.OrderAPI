@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using Mango.Services.OrderAPI.Models.Dto;
 
 
@@ -6,7 +7,7 @@ namespace Mango.Services.OrderAPI.Models
 {
     public class OrderDetails
     {
-        [key]
+        [Key]
         public int OrderDetailsId { get; set; }
         public int OrderHeaderId { get; set; }
         [ForeignKey("OrderHeaderId")]
