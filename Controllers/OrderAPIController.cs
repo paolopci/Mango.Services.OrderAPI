@@ -1,16 +1,15 @@
 ﻿using AutoMapper;
+using Mango.MessageBus;
 using Mango.Services.OrderAPI.Data;
 using Mango.Services.OrderAPI.Models;
 using Mango.Services.OrderAPI.Models.Dto;
+using Mango.Services.OrderAPI.Service.IService;
 using Mango.Services.OrderAPI.Utility;
 using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Stripe.Checkout;
-using Stripe;
-using Mango.MessageBus;
-using Mango.Services.OrderAPI.Service.IService;
 using Microsoft.EntityFrameworkCore;
+using Stripe;
+using Stripe.Checkout;
 
 namespace Mango.Services.OrderAPI.Controllers
 {

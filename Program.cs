@@ -9,6 +9,7 @@ using Mango.Services.OrderAPI.Utility;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
+using Stripe;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -71,7 +72,7 @@ app.UseSwaggerUI(c =>
         c.RoutePrefix = string.Empty;
     }
 });
-Stripe.StripeConfiguration.ApiKey = builder.Configuration.GetSection("Stripe:SecretKey").Get<string>();
+StripeConfiguration.ApiKey = builder.Configuration.GetSection("Stripe:SecretKey").Get<string>();
 
 app.UseHttpsRedirection();
 app.UseAuthentication();
